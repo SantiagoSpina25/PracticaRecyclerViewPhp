@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- A diferencia del ListView, el RecyclerView no genera cada item de la lista,
+    sino que los va reciclando, es decir, si hay 100 items en una lista,
+    solo creara los que aparezcan en pantalla, y a medida que el usuario vaya haciendo
+    scroll en la pantalla, se reutilizan los items que ya no se ven, y se le cambian
+    los datos internos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layoutAnimation="@anim/layout_animation_fall_down"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
